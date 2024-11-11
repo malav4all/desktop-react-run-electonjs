@@ -1,0 +1,20 @@
+{
+  "name": "lpldesktop",
+  "version": "0.0.1",
+  "description": "testing",
+  "scripts": {
+    "build-react": "npm --prefix ./app run build",
+    "build-electron": "npm run build-react && npm --prefix ./app run build-electron",
+    "build-win": "npm run build-react && npm --prefix ./app run build-win",
+    "build-mac": "npm run build-react && npm --prefix ./app run build-mac",
+    "start": "electron ./app",
+    "electron-dev": "concurrently \"npm --prefix ./app start\" \"cross-env ELECTRON_START_URL=http://localhost:3000 electron ./app\""
+  },
+  "author": "malav",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8",
+    "react-scripts": "^5.0.1"
+  }
+}
